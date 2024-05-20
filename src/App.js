@@ -8,7 +8,7 @@ function App() {
         <div className="App">
             <header>
                 <h1 className="logo">
-                    <img src="/img/logo.png" alt="Taif's Kebabhaus" />
+                    <img src={process.env.PUBLIC_URL + '/img/logo.png'} alt="Taif's Kebabhaus" />
                 </h1>
                 <nav id="desktop-nav">
                     <a href="#home">Menü</a>
