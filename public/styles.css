@@ -1,0 +1,69 @@
+/*styles.css*/
+header {
+    background-color: #1f1f1f;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ff6600; /* Полосочка внизу */
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ff6600;
+}
+
+
+#mobile-nav {
+    display: none;
+    background-color: #333;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000; /* Высокий z-index для мобильной навигации */
+}
+
+#mobile-nav a {
+    background-size: cover;
+    display: inline-block;
+    width: 25px; /* Размер иконок */
+    height: 25px; /* Размер иконок */
+    color: #ffffff; /* Белый цвет значков */
+    margin-right: 28px;
+
+}
+
+#home-icon {
+    background-image: url('ico/shop.svg');
+}
+
+#about-icon {
+    background-image: url('ico/info.svg');
+}
+
+#login-icon {
+    background-image: url('ico/user.svg');
+}
+
+#cart-icon {
+    background-image: url('ico/cart.svg');
+}

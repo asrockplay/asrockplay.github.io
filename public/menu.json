@@ -1,0 +1,181 @@
+[
+  {
+    "category": "DÖNER",
+    "items": [
+      {"name": "Classic", "price": 5.50},
+      {"name": "Hähnchen", "price": 5.50},
+      {"name": "Käse", "price": 6.00},
+      {"name": "XXL", "price": 6.50},
+      {"name": "Vegetarisch", "price": 4.50},
+      {"name": "Vegetarisch mit Käse", "price": 5.00},
+      {"name": "Hawaii ", "price": 6.00},
+      {"name": "Dönerteller mit Brot", "price": 8.50},
+      {"name": "Dönerteller mit Pommes", "price": 9.50},
+      {"name": "Dönerteller Hawaii", "price": 8.50},
+      {"name": "Dürüm", "price": 6.00},
+      {"name": "Pomm-Döner klein", "price": 4.00},
+      {"name": "Pomm-Döner groß", "price": 4.50},
+      {"name": "Schnitzel-Döner", "price": 7.00}
+    ]
+  },
+  {
+    "category": "BURGER",
+    "items": [
+      {"name": "Hamburger", "price": 4.00},
+      {"name": "Cheeseburger", "price": 4.00},
+      {"name": "BBQ Burger", "price": 4.00},
+      {"name": "Menü mit Pommes oder Salat", "price": 6.50},
+      {"name": "Menü mit Pommes oder Salat + 0,33l Getränk", "price": 7.50, "addons": [
+        {"name": "Cola", "price": 0},
+        {"name": "Sprite", "price": 0},
+        {"name": "Fanta", "price": 0}
+      ]}
+    ]
+  },
+  {
+    "category": "FALAFEL",
+    "items": [
+      {"name": "Falafel-Rolle", "price": 5.50},
+      {"name": "Falafel im Fladenbrot", "price": 5.50},
+      {"name": "Falafel-Baguette", "price": 6.50},
+      {"name": "Falafel-Teller mit Pommes, Salat und Brot", "price": 8.00}
+    ]
+  },
+  {
+    "category": "BAGUETTE",
+    "items": [
+      {"name": "Salat und Käse", "price": 7.00},
+      {"name": "Schinken ", "price": 7.00},
+      {"name": "Salami ", "price": 7.00},
+      {"name": "Hawaii", "price": 7.00},
+      {"name": "Thunfisch", "price": 7.00},
+      {"name": "Mozzarella", "price": 7.00},
+      {"name": "Dönerfleisch", "price": 8.00}
+    ]
+  },
+  {
+    "category": "SALAT",
+    "items": [
+      {"name": "Gemischter Salat mit Sauce", "price": 3.50},
+      {"name": "Bauernsalat mit Käse und Sauce", "price": 4.00},
+      {"name": "Thunfischsalat", "price": 5.00},
+      {"name": "Dönersalat", "price": 5.50},
+      {"name": "Chefsalat mit Oliven, Käse, Mais, Peperoni", "price": 5.00},
+      {"name": "Tomaten-Mozzarella-Salat", "price": 5.00}
+    ]
+  },
+  {
+    "category": "WURST & FRITTIERTES",
+    "items": [
+      {"name": "Currywurst mit Pommes", "price": 6.00},
+      {"name": "Schnitzel mit Pommes und Salat", "price": 8.00},
+      {"name": "Pommes klein", "price": 3.00},
+      {"name": "Pommes groß", "price": 3.50},
+      {"name": "Nuggets 6 St.", "price": 3.50},
+      {"name": "Nuggets 9 St.", "price": 4.50},
+      {"name": "Nuggets (9 St.) mit Pommes", "price": 7.00}
+    ]
+  },
+  {
+    "category": "PIZZA",
+    "items": [
+      {
+        "name": "Margherita",
+        "sizes": [
+          {"size": "20cm", "price": 5.00},
+          {"size": "26cm", "price": 7.00},
+          {"size": "30cm", "price": 9.00}
+        ]
+      },
+      {
+        "name": "Salami",
+        "sizes": [
+          {"size": "20cm", "price": 5.50},
+          {"size": "26cm", "price": 7.50},
+          {"size": "30cm", "price": 9.50}
+        ]
+      },
+      {
+        "name": "Schinken",
+        "sizes": [
+          {"size": "20cm", "price": 5.50},
+          {"size": "26cm", "price": 7.50},
+          {"size": "30cm", "price": 9.50}
+        ]
+      },
+      {
+        "name": "Sucuk",
+        "sizes": [
+          {"size": "20cm", "price": 5.50},
+          {"size": "26cm", "price": 7.50},
+          {"size": "30cm", "price": 9.50}
+        ]
+      },
+      {
+        "name": "Thunfisch",
+        "sizes": [
+          {"size": "20cm", "price": 5.50},
+          {"size": "26cm", "price": 7.50},
+          {"size": "30cm", "price": 9.50}
+        ]
+      },
+      {
+        "name": "Mozzarella",
+        "sizes": [
+          {"size": "20cm", "price": 5.50},
+          {"size": "26cm", "price": 7.50},
+          {"size": "30cm", "price": 9.50}
+        ]
+      },
+      {
+        "name": "Funghi",
+        "sizes": [
+          {"size": "20cm", "price": 5.50},
+          {"size": "26cm", "price": 7.50},
+          {"size": "30cm", "price": 9.50}
+        ]
+      },
+      {
+        "name": "Hawai",
+        "sizes": [
+          {"size": "20cm", "price": 5.50},
+          {"size": "26cm", "price": 7.50},
+          {"size": "30cm", "price": 9.50}
+        ]
+      },
+      {
+        "name": "Mista",
+        "sizes": [
+          {"size": "20cm", "price": 6.00},
+          {"size": "26cm", "price": 8.00},
+          {"size": "30cm", "price": 10.00}
+        ]
+      },
+      {
+        "name": "Vegetarisch",
+        "sizes": [
+          {"size": "20cm", "price": 5.50},
+          {"size": "26cm", "price": 7.50},
+          {"size": "30cm", "price": 9.50}
+        ]
+      },
+      {
+        "name": "Anatolien",
+        "sizes": [
+          {"size": "20cm", "price": 6.00},
+          {"size": "26cm", "price": 8.00},
+          {"size": "30cm", "price": 10.00}
+        ]
+      }
+    ]
+  },
+  {
+    "category": "GETRÄNKE",
+    "items": [
+      {"name": "Kaffee", "price": 2.50},
+      {"name": "Tee", "price": 1.50},
+      {"name": "Cola, Fanta, Sprite, Eistee, Wasser (0,33 l)", "price": 1.50},
+      {"name": "Alkoholfreies Bier (0,33 l)", "price": 2.50}
+    ]
+  }
+]

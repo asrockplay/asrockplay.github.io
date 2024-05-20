@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
+/*App.css*/
+body {
+    background-size: cover;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+@media (max-width: 710px) {
+    #desktop-nav {
+        display: none;
+    }
+    #mobile-nav {
+        display: flex;
+        justify-content: space-around;
+    }
+     #mobile-nav a {
+            padding: 0.01rem; /* Уменьшено */
+        }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.logo {
+    max-width: 200px; /* Максимальная ширина изображения */
+    max-height: 50px; /* Максимальная высота изображения */
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    display: flex; /* Используем flexbox */
+    align-items: center; /* Выравниваем элементы по вертикали */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo img {
+    width: 100%;
+    height: auto;
 }
