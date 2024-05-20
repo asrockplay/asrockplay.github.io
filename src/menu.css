@@ -77,12 +77,12 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 6px;
     border-radius: 5px;
-    font-size: 14px;
-    color: #333;
-    border: 1px solid #000;
+    font-size: 15px ;
+    font-weight: bold;
+    color: white;
     z-index: 1;
     cursor: pointer;
 }
@@ -100,6 +100,7 @@
     flex-direction: column;
     z-index: 1;
     background: #aba7a754;
+    box-shadow: 0 2px 4px rgba(202, 157, 102, 0.7);
 }
 
 .item-image {
@@ -166,10 +167,10 @@
         background-color: #f9f9f9;
         color: #333;
         width: 55px;
-        height: 30px;
+        height: 33px;
         margin-left: 8px;
         margin-right: 11px;
-        margin-bottom: 9px;
+        margin-bottom: 10px;
     }
 }
 
@@ -552,7 +553,7 @@
         background-color: #f9f9f9;
         color: #333;
         width: 58px;
-        height: 55px;
+        height: 56px;
     }
 }
 

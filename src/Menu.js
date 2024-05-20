@@ -110,7 +110,7 @@ function Menu() {
                             .items.map((item, index) => (
                                 <li key={index}>
                                     <div className="item-card">
-                                        <div className="edit-label" onClick={() => handleItemClick(item)}>Bearbeiten</div>
+                                        <div className="edit-label" onClick={() => handleItemClick(item)}>Anpassen</div>
                                         <img
                                             src={`/img/${item.name}.jpg`}
                                             alt={item.name}
