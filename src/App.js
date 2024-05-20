@@ -1,4 +1,3 @@
-// App.js
 import React from 'react';
 import './App.css';
 import Menu from './Menu';
@@ -6,6 +5,25 @@ import Menu from './Menu';
 function App() {
     return (
         <div className="App">
+            <head>
+                <script>
+                    {`
+                        function isMobile() {
+                            return /Mobi|Android/i.test(navigator.userAgent);
+                        }
+
+                        if (isMobile()) {
+                            document.documentElement.style.setProperty('--config-menu-height', '100%');
+                            document.documentElement.style.setProperty('--config-menu-content-height', '100%');
+                            document.documentElement.style.setProperty('--config-item-image-max-height', '30vh');
+                        } else {
+                            document.documentElement.style.setProperty('--config-menu-height', '100vh');
+                            document.documentElement.style.setProperty('--config-menu-content-height', 'calc(100% - 50px)');
+                            document.documentElement.style.setProperty('--config-item-image-max-height', 'initial');
+                        }
+                    `}
+                </script>
+            </head>
             <header>
                 <h1 className="logo">
                     <img src={process.env.PUBLIC_URL + '/img/logo.png'} alt="Taif's Kebabhaus" />

@@ -8,6 +8,7 @@ function Menu() {
     const [selectedQuantities, setSelectedQuantities] = useState({});
     const [showConfigMenu, setShowConfigMenu] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
+    const [openSections, setOpenSections] = useState({ sossen: false, zutaten: false, sizes: false });
 
     useEffect(() => {
         const fetchMenuData = async () => {
@@ -80,6 +81,13 @@ function Menu() {
         document.body.style.overflow = '';
         document.body.style.position = '';
         document.body.style.width = '';
+    };
+
+    const toggleSection = (section) => {
+        setOpenSections((prevState) => ({
+            ...prevState,
+            [section]: !prevState[section]
+        }));
     };
 
     return (
@@ -166,45 +174,60 @@ function Menu() {
                             className="config-item-image"
                         />
                         <div className="config-item-details">
-                            <h2>{selectedItem.name}</h2>
-                            <p className="config-item-price">{getPrice(selectedItem)}€</p>
-                            <p className="config-item-description">Описание товара здесь</p>
-
+                            <div className="config-section-wrapper">
+                                <h2>{selectedItem.name}</h2>
+                                <p className="config-item-price">{getPrice(selectedItem)}€</p>
+                                <p className="config-item-description">Beschreibung hier. Z.b zutaten u.s.w.</p>
+                            </div>
                             {selectedItem.sizes && (
-                                <div className="config-section">
-                                    <h3>Größe:</h3>
-                                    <select
-                                        className="size-select"
-                                        value={selectedSizes[selectedItem.name] || selectedItem.sizes[0].size}
-                                        onChange={(e) => handleSizeChange(selectedItem.name, e.target.value)}
-                                    >
-                                        {selectedItem.sizes.map((size, idx) => (
-                                            <option key={idx} value={size.size}>
-                                                {size.size}
-                                            </option>
-                                        ))}
-                                    </select>
+                                <div className="config-section-wrapper">
+                                    <div className="config-section-header" onClick={() => toggleSection('sizes')}>
+                                        <h3>Größe:</h3>
+                                        <span className={`arrow ${openSections.sizes ? 'down' : 'right'}`}></span>
+                                    </div>
+                                    {openSections.sizes && (
+                                        <select
+                                            className="size-select"
+                                            value={selectedSizes[selectedItem.name] || selectedItem.sizes[0].size}
+                                            onChange={(e) => handleSizeChange(selectedItem.name, e.target.value)}
+                                        >
+                                            {selectedItem.sizes.map((size, idx) => (
+                                                <option key={idx} value={size.size}>
+                                                    {size.size}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    )}
                                 </div>
                             )}
-
-                            <div className="config-section">
-                                <h3>Soßen:</h3>
-                                <select className="sauce-select">
-                                    <option>Soße 1</option>
-                                    <option>Soße 2</option>
-                                    <option>Soße 3</option>
-                                    <option>Soße 4</option>
-                                </select>
+                            <div className="config-section-wrapper">
+                                <div className="config-section-header" onClick={() => toggleSection('sossen')}>
+                                    <h3>Soßen:</h3>
+                                    <span className={`arrow ${openSections.sossen ? 'down' : 'right'}`}></span>
+                                </div>
+                                {openSections.sossen && (
+                                    <select className="sauce-select">
+                                        <option>Soße 1</option>
+                                        <option>Soße 2</option>
+                                        <option>Soße 3</option>
+                                        <option>Soße 4</option>
+                                    </select>
+                                )}
                             </div>
 
-                            <div className="config-section">
-                                <h3>Zutaten:</h3>
-                                <select className="toppings-select" multiple>
-                                    <option>Zusatzstoff 1</option>
-                                    <option>Zusatzstoff 2</option>
-                                    <option>Zusatzstoff 3</option>
-                                    <option>Zusatzstoff 4</option>
-                                </select>
+                            <div className="config-section-wrapper">
+                                <div className="config-section-header" onClick={() => toggleSection('zutaten')}>
+                                    <h3>Zutaten:</h3>
+                                    <span className={`arrow ${openSections.zutaten ? 'down' : 'right'}`}></span>
+                                </div>
+                                {openSections.zutaten && (
+                                    <select className="toppings-select" multiple>
+                                        <option>Zusatzstoff 1</option>
+                                        <option>Zusatzstoff 2</option>
+                                        <option>Zusatzstoff 3</option>
+                                        <option>Zusatzstoff 4</option>
+                                    </select>
+                                )}
                             </div>
                         </div>
                         <div className="config-footer">
